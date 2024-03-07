@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lemonada:wght@300..700&display=swap");
+
+/* font-family: "Lemonada", cursive; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "bakilda_historiregular";
+  src: url(../public/bakilda-histori.woff2) format("woff2"),
+    url(../public/bakilda-histori.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "value_sans_problack";
+  src: url(../public/valuesanspro-black.woff2) format("woff2"),
+    url(../public/valuesanspro-black.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "value_sans_probold";
+  src: url(../public/valuesanspro-bold.woff2) format("woff2"),
+    url(../public/valuesanspro-bold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "value_sans_promedium";
+  src: url(../public/valuesanspro-medium.woff2) format("woff2"),
+    url(../public/valuesanspro-medium.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "value_sans_proregular";
+  src: url(../public/valuesanspro-regular.woff2) format("woff2"),
+    url(../public/valuesanspro-regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abril_displayblack";
+  src: url(../public/abril_display_black.woff2) format("woff2"),
+    url(../public/abril_display_black.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abril_displaybold";
+  src: url(../public/abril_display_bold.woff2) format("woff2"),
+    url(../public/abril_display_bold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abril_displayextrabold";
+  src: url(../public/abril_display_extrabold.woff2) format("woff2"),
+    url(../public/abril_display_extrabold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abril_displayregular_";
+  src: url(../public/abril_display_regular.woff2) format("woff2"),
+    url(../public/abril_display_regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "bakilda_historiregular";
 }
