@@ -1,3 +1,5 @@
+import Contact from "../pages/ContactPages/Contact";
+import ErrorPage from "../pages/ErrorPages/ErrorPage";
 import Home from "../pages/HomePages/Home";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -7,11 +9,15 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts />,
-    errorElement: <>this is error</>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

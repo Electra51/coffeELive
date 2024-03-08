@@ -8,8 +8,8 @@ import ShowCase from "./ShowcaseSection/ShowCase";
 const Home = () => {
   return (
     <>
-      {/* <HeroSection />
-      <AboutMenuSection />
+      <HeroSection />
+      {/* <AboutMenuSection />
       <CoffeeMenuSection />
       <NewReceipeSection />
       <ShowCase /> */}
