@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { Gallery } from "react-grid-gallery";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
+import { images } from "./images";
 
 const ShowCase = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -6,38 +10,79 @@ const ShowCase = () => {
     setToggleState(index);
   };
 
-  //   //filter handle function
-  //   const handleRatingFilterChange = (e) => {
-  //     const selectedRating = e.target.value;
-  //     setRatingFilter(selectedRating);
-  //   };
+  const Burger = images?.filter((item) => item.category === "Burger");
+  const Drinks = images?.filter((item) => item.category === "Drinks");
+  const Pizza = images?.filter((item) => item.category === "Pizza");
+  const Dinner = images?.filter((item) => item.category === "Dinner");
+  const Cookies = images?.filter((item) => item.category === "Cookies");
+  const Bakery = images?.filter((item) => item.category === "Bakery");
 
-  //   const Art = filteredServices?.filter((item) => item.type === "Art");
-  //   const Celebrities = filteredServices?.filter(
-  //     (item) => item.type === "Celebrities"
-  //   );
-  //   const Gaming = filteredServices?.filter((item) => item.type === "Gaming");
-  //   const Sport = filteredServices?.filter((item) => item.type === "Sport");
-  //   const Music = filteredServices?.filter((item) => item.type === "Music");
-  //   const Crypto = filteredServices?.filter((item) => item.type === "Crypto");
+  const [index, setIndex] = useState(-1);
 
-  //   const renderFilteredServices = (filteredItems) => {
-  //     if (filteredItems && filteredItems.length > 0) {
-  //       return (
-  //         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 my-7 justify-items-center">
-  //           {filteredItems.map((item, index) => (
-  //             <Card item={item} key={index} />
-  //           ))}
-  //         </div>
-  //       );
-  //     } else {
-  //       return (
-  //         <p className="text-red-500 text-xl flex flex-col justify-center items-center my-20 gap-4">
-  //           No products available for the selected rating or search.
-  //         </p>
-  //       );
-  //     }
-  //   };
+  const currentImage = images[index];
+  const nextIndex = (index + 1) % images.length;
+  const nextImage = images[nextIndex] || currentImage;
+  const prevIndex = (index + images.length - 1) % images.length;
+  const prevImage = images[prevIndex] || currentImage;
+
+  const handleClick = (index) => setIndex(index);
+  const handleClose = () => setIndex(-1);
+  const handleMovePrev = () => setIndex(prevIndex);
+  const handleMoveNext = () => setIndex(nextIndex);
+
+  // Calculate container width based on the number of images and gap
+  const containerWidth = images.length * (424 + 24) - 24;
+
+  const renderFilteredServices = (filteredItems) => {
+    if (filteredItems && filteredItems.length > 0) {
+      return (
+        <div style={{ maxWidth: containerWidth + "px" }}>
+          <div className="flex flex-wrap gap-[24px]">
+            {filteredItems?.map((e, i) => (
+              <div
+                key={i}
+                style={{
+                  width: e.width + "px",
+                  height: e.height + "px",
+                  borderRadius: e.radius + "px",
+                  overflow: "hidden",
+                  marginBottom: "24px", // Add gap at the bottom
+                }}>
+                <img
+                  src={e.src}
+                  alt={e.caption}
+                  className="object-cover w-full h-full"
+                  onClick={() => handleClick(i)}
+                />
+              </div>
+            ))}
+
+            {!!currentImage && (
+              <Lightbox
+                mainSrc={currentImage.original}
+                imageTitle={currentImage.caption}
+                mainSrcThumbnail={currentImage.src}
+                nextSrc={nextImage.original}
+                nextSrcThumbnail={nextImage.src}
+                prevSrc={prevImage.original}
+                prevSrcThumbnail={prevImage.src}
+                onCloseRequest={handleClose}
+                onMovePrevRequest={handleMovePrev}
+                onMoveNextRequest={handleMoveNext}
+              />
+            )}
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <p className="text-red-500 text-xl flex flex-col justify-center items-center my-20 gap-4">
+          No products available for the selected rating or search.
+        </p>
+      );
+    }
+  };
+
   return (
     <div className="pt-[90px] w-[1391px] mx-auto">
       <p
@@ -131,35 +176,15 @@ const ShowCase = () => {
           </p>
         </div>
         <div className="mt-[48px]">
-          {toggleState === 1 && <p>hi</p>}
-          {toggleState === 2 && <p>hi hello</p>}
-          {toggleState === 3 && <p>hi</p>}
-          {toggleState === 4 && <p>hi</p>}
-          {toggleState === 5 && <p>hi</p>}
-          {toggleState === 6 && <p>hi</p>}
-          {toggleState === 7 && <p>hi</p>}
+          {toggleState === 1 && renderFilteredServices(images)}
+          {toggleState === 2 && renderFilteredServices(Burger)}
+          {toggleState === 3 && renderFilteredServices(Drinks)}
+          {toggleState === 4 && renderFilteredServices(Pizza)}{" "}
+          {toggleState === 5 && renderFilteredServices(Dinner)}
+          {toggleState === 6 && renderFilteredServices(Cookies)}
+          {toggleState === 7 && renderFilteredServices(Bakery)}
         </div>
       </div>
-
-      {/* <div className="md:mt-[90px] lg:mt-0">
-        {toggleState === 1 && renderFilteredServices(filteredServices)}
-        {toggleState === 2 && renderFilteredServices(Art)}
-        {toggleState === 3 && renderFilteredServices(Celebrities)}
-        {toggleState === 4 && renderFilteredServices(Gaming)}
-        {toggleState === 5 && renderFilteredServices(Sport)}
-        {toggleState === 6 && renderFilteredServices(Music)}
-        {toggleState === 7 && renderFilteredServices(Crypto)}
-
-        <Link
-          to="/market_place"
-          className="py-[30px] flex justify-center items-center">
-          <button>
-            <p className="h-[66px] w-[179px] rounded-[50px] text-[#3D00B7] border border-[#3D00B7] text-xl text-medium flex justify-center items-center cursor-pointer hover:shadow-md shadow-violet-900 hover:bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-500 hover:text-white">
-              More NFTs
-            </p>
-          </button>
-        </Link>
-      </div> */}
     </div>
   );
 };
