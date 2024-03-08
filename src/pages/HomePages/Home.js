@@ -8,11 +8,11 @@ import ShowCase from "./ShowcaseSection/ShowCase";
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <AboutMenuSection />
       <CoffeeMenuSection />
       <NewReceipeSection />
-      <ShowCase />
+      <ShowCase /> */}
     </>
   );
 };
