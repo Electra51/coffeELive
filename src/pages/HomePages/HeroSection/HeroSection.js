@@ -179,7 +179,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="col-span-3 py-[70px]">
-            <div className="grid grid-cols-3 divide-x-2 ">
+            <div className="grid grid-cols-3 divide-x-2 divide-[#270A05] divide-opacity-10">
               {aboutData?.map((data, i) => {
                 return (
                   <div className=" pl-[76px]" key={i}>

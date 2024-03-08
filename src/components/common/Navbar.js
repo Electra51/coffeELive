@@ -49,7 +49,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="border-0 border-b border-[#c5c5c59f] pt-[7px] lg:pt-[20px] pb-[7px] lg:pb-[35px]">
+    <div className="border-0 border-b border-[#101113] border-opacity-10 pt-[7px] lg:pt-[20px] pb-[7px] lg:pb-[35px]">
       <div className="navbar bg-base-100 w-[390px] lg:w-[1366px] mx-auto ">
         <div className="navbar-start relative">
           <div className="dropdown">

@@ -224,3 +224,21 @@ export const aboutData = [
     name3: "+1 452-754-6579",
   },
 ];
+
+export const aboutMenuData = [
+  {
+    id: 1,
+    number: "20+",
+    title: "Years Experience",
+  },
+  {
+    id: 2,
+    number: "100+",
+    title: "Master Chefs",
+  },
+  {
+    id: 3,
+    number: "30+",
+    title: "Achievements",
+  },
+];
