@@ -60,7 +60,11 @@ const AboutMenuSection = () => {
             epitome of craftsmanship, flavor, and dedication.
           </p>
           <div className="flex justify-center lg:justify-start items-center">
-            <button className="w-[190px] lg:w-[199px] h-[42px] lg:h-[52px] rounded-xl border border-[#86371C] text-[#86371C] mt-[50px] text-[12px] lg:text-[16px] text-nowrap">
+            <button
+              className="w-[190px] lg:w-[199px] h-[42px] lg:h-[52px] rounded-xl border border-[#86371C] text-[#86371C] mt-[50px] text-[12px] lg:text-[16px] text-nowrap"
+              style={{
+                fontFamily: "value_sans_proregular",
+              }}>
               Explore Our Menus
             </button>
           </div>

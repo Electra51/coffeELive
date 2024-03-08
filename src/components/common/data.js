@@ -10,7 +10,10 @@ import avarter3 from "../../assets/heroSectionImage/avater3.jpeg";
 import avarter4 from "../../assets/heroSectionImage/avater4.jpeg";
 import avarter5 from "../../assets/heroSectionImage/avater5.jpeg";
 import avarter6 from "../../assets/heroSectionImage/avater6.jpeg";
-
+import coffeeMenuImg1 from "../../assets/CoffeeMenuImage/1.jpeg";
+import coffeeMenuImg2 from "../../assets/CoffeeMenuImage/2.jpeg";
+import coffeeMenuImg3 from "../../assets/CoffeeMenuImage/3.jpeg";
+import coffeeMenuImg4 from "../../assets/CoffeeMenuImage/4.jpeg";
 export const navMenus = [
   {
     menu_name: "Home",
@@ -240,5 +243,36 @@ export const aboutMenuData = [
     id: 3,
     number: "30+",
     title: "Achievements",
+  },
+];
+
+export const coffeeMenuData = [
+  {
+    id: 1,
+    title: "Double Espresso x2",
+    para: "There are many variations of passages Lorem Ipsum form",
+    img: coffeeMenuImg1,
+    rate: 10,
+  },
+  {
+    id: 2,
+    title: "Hazelnut Heaven Latte",
+    para: "There are many variations of passages Lorem Ipsum form",
+    img: coffeeMenuImg2,
+    rate: 12,
+  },
+  {
+    id: 3,
+    title: "Salted Caramel Cold Brew",
+    para: "There are many variations of passages Lorem Ipsum form",
+    img: coffeeMenuImg3,
+    rate: 9,
+  },
+  {
+    id: 4,
+    title: "Coconut Cream Delight (Summer)",
+    para: "There are many variations of passages Lorem Ipsum form",
+    img: coffeeMenuImg4,
+    rate: 15,
   },
 ];

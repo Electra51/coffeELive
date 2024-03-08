@@ -88,7 +88,11 @@ const HeroSection = () => {
                       {hero?.para}
                     </p>
                     <div className="flex justify-start gap-[44px] items-center lg:mt-[50px] mt-[20px]">
-                      <button className="w-[190px] px-3 lg:w-[211px] h-[42px] lg:h-[52px] rounded-[8px] lg:rounded-[12px] bg-[#86371C] text-white flex justify-center items-center text-[12px] lg:text-[16px] text-nowrap">
+                      <button
+                        className="w-[190px] px-3 lg:w-[211px] h-[42px] lg:h-[52px] rounded-[8px] lg:rounded-[12px] bg-[#86371C] text-white flex justify-center items-center text-[12px] lg:text-[16px] text-nowrap"
+                        style={{
+                          fontFamily: "value_sans_proregular",
+                        }}>
                         EXPLORE OUR MENU
                       </button>
 
