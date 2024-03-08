@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { images } from "./images";
@@ -18,6 +17,7 @@ const ShowCase = () => {
   const Bakery = images?.filter((item) => item.category === "Bakery");
 
   const [index, setIndex] = useState(-1);
+  const [displayCount, setDisplayCount] = useState(5);
 
   const currentImage = images[index];
   const nextIndex = (index + 1) % images.length;
@@ -33,12 +33,19 @@ const ShowCase = () => {
   // Calculate container width based on the number of images and gap
   const containerWidth = images.length * (424 + 24) - 24;
 
+  const showMore = (filteredItems) => {
+    setDisplayCount(filteredItems.length);
+  };
+
+  const showLess = () => {
+    setDisplayCount(5);
+  };
   const renderFilteredServices = (filteredItems) => {
     if (filteredItems && filteredItems.length > 0) {
       return (
         <div style={{ maxWidth: containerWidth + "px" }}>
           <div className="flex flex-wrap gap-[24px]">
-            {filteredItems?.map((e, i) => (
+            {filteredItems?.slice(0, displayCount).map((e, i) => (
               <div
                 key={i}
                 style={{
@@ -56,6 +63,24 @@ const ShowCase = () => {
                 />
               </div>
             ))}
+
+            {filteredItems.length > 5 && (
+              <div className="flex justify-center mx-auto mt-4 pb-[90px]">
+                {displayCount === filteredItems.length ? (
+                  <button
+                    className="w-[162px] text-[16px] text-[#86371C] h-[52px] rounded-[12px] border border-[#86371C]"
+                    onClick={showLess}>
+                    Show Less
+                  </button>
+                ) : (
+                  <button
+                    className="w-[162px] text-[16px] text-[#86371C] h-[52px] rounded-[12px] border border-[#86371C]"
+                    onClick={() => showMore(filteredItems)}>
+                    View All Menu
+                  </button>
+                )}
+              </div>
+            )}
 
             {!!currentImage && (
               <Lightbox
