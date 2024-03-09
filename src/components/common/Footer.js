@@ -8,12 +8,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <div className={`h-[110px] relative`}>
+      <div className={`h-[190px] lg:h-[110px] relative`}>
         <img src={footerImage} alt="" className="h-full object-fill w-full" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1391px] mx-auto flex justify-between items-center">
-            <img src={footerLogo} alt="" />
-            <div className="flex justify-center items-center gap-[45px]">
+          <div className="w-[380px] lg:w-[1391px] mx-auto block lg:flex justify-between justify-items-center items-center space-y-8">
+            <div className="flex justify-center items-center ">
+              <img src={footerLogo} alt="" />
+            </div>
+            <div className="flex justify-center items-center gap-[25px] lg:gap-[45px]">
               <p
                 className="text-[16px] font-normal text-white"
                 style={{
