@@ -350,11 +350,7 @@ export const images = [
     width: 424,
     height: 348,
     radius: 24,
-    tags: [
-      { value: "Nature", title: "Nature" },
-      { value: "Flora", title: "Flora" },
-    ],
-    caption: "After Rain (Jeshu John - designerspics.com)",
+    caption: "CatCat",
   },
   {
     id: 2,
@@ -364,7 +360,7 @@ export const images = [
     category: "Drinks",
     height: 348,
     radius: 24,
-    caption: "Boats (Jeshu John - designerspics.com)",
+    caption: "Black Coffee",
   },
   {
     id: 3,
@@ -373,7 +369,7 @@ export const images = [
     width: 312,
     radius: 24,
     height: 348,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
+    caption: "Custered Cake",
   },
   {
     id: 21,
@@ -383,7 +379,7 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Hot Chocolate",
   },
   {
     id: 4,
@@ -393,7 +389,7 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+    caption: "MilkShake",
   },
   {
     id: 6,
@@ -403,11 +399,7 @@ export const images = [
     height: 348,
     category: "Burger",
     radius: 24,
-    tags: [
-      { value: "Nature", title: "Nature" },
-      { value: "Flora", title: "Flora" },
-    ],
-    caption: "After Rain (Jeshu John - designerspics.com)",
+    caption: "Berry Burger",
   },
   {
     id: 5,
@@ -416,9 +408,8 @@ export const images = [
     width: 424,
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Donats",
   },
-
   {
     id: 25,
     src: lemonate2,
@@ -427,19 +418,17 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Watermelon Juice",
   },
   {
     id: 7,
     src: burgerImg2,
     original: burgerImg2,
     category: "Burger",
-    // width: 424,
-    // height: 348,
     width: 872,
     height: 348,
     radius: 24,
-    caption: "Boats (Jeshu John - designerspics.com)",
+    caption: "Beaf Burger",
   },
   {
     id: 15,
@@ -449,9 +438,8 @@ export const images = [
     radius: 24,
     category: "Cookies",
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Strobery Cookies",
   },
-
   {
     id: 24,
     src: lemonate3,
@@ -460,7 +448,7 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Lemonate",
   },
   {
     id: 9,
@@ -470,7 +458,7 @@ export const images = [
     category: "Burger",
     radius: 24,
     height: 348,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+    caption: "Chicken Chap Burger",
   },
   {
     id: 10,
@@ -480,9 +468,8 @@ export const images = [
     category: "Burger",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Spicy Burger",
   },
-
   {
     id: 12,
     src: bakery1,
@@ -491,7 +478,7 @@ export const images = [
     category: "Bakery",
     height: 348,
     radius: 24,
-    caption: "Boats (Jeshu John - designerspics.com)",
+    caption: "Cookies",
   },
   {
     id: 22,
@@ -501,24 +488,18 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Lemon Juice",
   },
   {
     id: 11,
     src: burgerImg5,
     original: burgerImg5,
-
     width: 312,
     category: "Burger",
     height: 348,
     radius: 24,
-    tags: [
-      { value: "Nature", title: "Nature" },
-      { value: "Flora", title: "Flora" },
-    ],
-    caption: "After Rain (Jeshu John - designerspics.com)",
+    caption: "Fried Chichen Burger",
   },
-
   {
     id: 14,
     src: barekry2,
@@ -527,7 +508,7 @@ export const images = [
     category: "Bakery",
     radius: 24,
     height: 348,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+    caption: "Kunafa",
   },
   {
     id: 13,
@@ -537,9 +518,8 @@ export const images = [
     category: "Bakery",
     radius: 24,
     height: 348,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
+    caption: "Bread",
   },
-
   {
     id: 19,
     src: dinner2,
@@ -548,7 +528,7 @@ export const images = [
     category: "Dinner",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Nudools",
   },
   {
     id: 18,
@@ -558,7 +538,7 @@ export const images = [
     category: "Dinner",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Fish Fry",
   },
   {
     id: 20,
@@ -568,18 +548,17 @@ export const images = [
     width: 424,
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Cookies with sugar",
   },
   {
     id: 26,
     src: pizza1,
     original: pizza1,
     width: 872,
-
     category: "Pizza",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Veg Pizza",
   },
   {
     id: 16,
@@ -589,7 +568,7 @@ export const images = [
     category: "Cookies",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Cream Bread",
   },
   {
     id: 23,
@@ -599,7 +578,7 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Banana Shake",
   },
 
   {
@@ -610,7 +589,7 @@ export const images = [
     category: "Pizza",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Paparony Pizza",
   },
   {
     id: 28,
@@ -620,7 +599,7 @@ export const images = [
     category: "Drinks",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Hot Coffee",
   },
   {
     id: 32,
@@ -630,7 +609,7 @@ export const images = [
     category: "Pizza",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Chicken Pizza",
   },
   {
     id: 17,
@@ -640,6 +619,6 @@ export const images = [
     category: "Cookies",
     radius: 24,
     height: 348,
-    caption: "37H (gratispgraphy.com)",
+    caption: "Cookies",
   },
 ];

@@ -8,6 +8,7 @@ import bg3 from "../../../assets/heroSectionImage/bg-coffee.png";
 import openImg from "../../../assets/heroSectionImage/openimage.png";
 import { FaPlay } from "react-icons/fa6";
 import { heroData, aboutData } from "../../../components/common/data";
+import Button from "../../../components/common/Button";
 
 const HeroSection = () => {
   const settings = {
@@ -88,13 +89,11 @@ const HeroSection = () => {
                       {hero?.para}
                     </p>
                     <div className="flex justify-start gap-[44px] items-center lg:mt-[50px] mt-[20px]">
-                      <button
-                        className="w-[190px] px-3 lg:w-[211px] h-[42px] lg:h-[52px] rounded-[8px] lg:rounded-[12px] bg-[#86371C] text-white flex justify-center items-center text-[12px] lg:text-[16px] text-nowrap"
-                        style={{
-                          fontFamily: "value_sans_proregular",
-                        }}>
-                        EXPLORE OUR MENU
-                      </button>
+                      <Button
+                        title={"EXPLORE OUR MENU"}
+                        bgColor={"#86371C"}
+                        textColor={"white"}
+                      />
 
                       <div className="flex justify-normal items-center gap-[12px] lg:gap-[24px]">
                         {" "}

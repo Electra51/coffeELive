@@ -1,15 +1,15 @@
 import React from "react";
 import HeroSection from "./HeroSection/HeroSection";
-import AboutMenuSection from "./AboutMenuSection/AboutMenuSection";
 import CoffeeMenuSection from "./CoffeeMenuSection/CoffeeMenuSection";
 import NewReceipeSection from "./NewReceipeSection/NewReceipeSection";
 import ShowCase from "./ShowcaseSection/ShowCase";
+import WhyChooseSection from "./WhyChooseSection/WhyChooseSection";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <AboutMenuSection />
+      <WhyChooseSection />
       <CoffeeMenuSection />
       <NewReceipeSection />
       <ShowCase />

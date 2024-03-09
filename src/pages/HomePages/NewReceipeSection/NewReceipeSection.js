@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { TiArrowLeft, TiArrowRight } from "react-icons/ti";
 import { RecipeData } from "../../../components/common/data";
+import SectionHeaderText from "../../../components/common/SectionHeaderText";
 
 const NewReceipeSection = () => {
   const sliderRef = useRef(null);
@@ -42,7 +43,7 @@ const NewReceipeSection = () => {
       },
     ],
   };
-
+  //slide next prev function
   const goToPrevSlide = () => {
     sliderRef.current.slickPrev();
   };
@@ -50,6 +51,7 @@ const NewReceipeSection = () => {
   const goToNextSlide = () => {
     sliderRef.current.slickNext();
   };
+
   return (
     <div className="pt-0 lg:pt-[100px] h-[673px] bg-[#FFFAF2]">
       <div className="flex flex-col lg:flex-row justify-normal items-center gap-[60px] lg:gap-[100px] w-[340px] lg:w-[1391px] mx-auto">
@@ -66,11 +68,7 @@ const NewReceipeSection = () => {
             <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C] lg:hidden"></div>
           </div>
 
-          <p
-            className=" text-[22px] lg:text-left text-center lg:text-[44px] text-[#270A05] mt-[10px] lg:mt-[12px] leading-[30px] lg:leading-[60px]"
-            style={{ fontFamily: "bakilda_historiregular" }}>
-            Taste Our New Recipe
-          </p>
+          <SectionHeaderText title={"Taste Our New Recipe"} />
           <p
             className="text-[16px] font-normal leading-[21px] lg:leading-[24px] mt-[19px] text-[#53565C] text-justify"
             style={{

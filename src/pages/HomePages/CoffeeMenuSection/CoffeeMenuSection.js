@@ -2,6 +2,8 @@ import React from "react";
 import { coffeeMenuData } from "../../../components/common/data";
 import { Link } from "react-router-dom";
 import coffeeMenubg from "../../../assets/CoffeeMenuImage/coffeeMenubg.png";
+import Button from "../../../components/common/Button";
+import SectionHeaderText from "../../../components/common/SectionHeaderText";
 
 const CoffeeMenuSection = () => {
   return (
@@ -22,11 +24,8 @@ const CoffeeMenuSection = () => {
         </p>
         <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C]"></div>
       </div>
-      <p
-        className="text-[22px] lg:text-[44px] text-[#270A05] text-center mt-[10px] lg:mt-[14px]"
-        style={{ fontFamily: "bakilda_historiregular" }}>
-        Unlocklive Coffee Menu
-      </p>
+
+      <SectionHeaderText title={"Unlocklive Coffee Menu"} />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mt-[40px] lg:mt-[80px] pb-[40px] lg:pb-[60px]">
         {coffeeMenuData?.map((coffeeMenu, i) => {
           return (
@@ -76,14 +75,12 @@ const CoffeeMenuSection = () => {
           );
         })}
       </div>
-      <Link to="/menu">
-        <button
-          className="w-[130px] lg:w-[162px] text-[13px] lg:text-[16px] text-[#86371C] h-[39px] lg:h-[52px] rounded-[8px] lg:rounded-[12px] border border-[#86371C]"
-          style={{
-            fontFamily: "value_sans_proregular",
-          }}>
-          View All Menu
-        </button>
+      <Link to="/menu" className="mt-[25px] lg:mt-[45px]">
+        <Button
+          title={"View All Menu"}
+          bgColor={"#00FFFFFF"}
+          textColor={"#86371C"}
+        />
       </Link>
     </div>
   );

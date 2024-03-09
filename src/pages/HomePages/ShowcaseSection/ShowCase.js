@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { images } from "../../../components/common/data";
+import Button from "../../../components/common/Button";
+import SectionHeaderText from "../../../components/common/SectionHeaderText";
 
 const ShowCase = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -30,7 +32,7 @@ const ShowCase = () => {
   const handleMovePrev = () => setIndex(prevIndex);
   const handleMoveNext = () => setIndex(nextIndex);
 
-  // Calculate container width based on the number of images and gap
+  // Calculation container width based on the number of images and gap
   const containerWidth = images.length * (424 + 24) - 24;
 
   const showMore = (filteredItems) => {
@@ -40,50 +42,63 @@ const ShowCase = () => {
   const showLess = () => {
     setDisplayCount(5);
   };
+
   const renderFilteredServices = (filteredItems) => {
     if (filteredItems && filteredItems.length > 0) {
       return (
         <div style={{ maxWidth: containerWidth + "px" }}>
-          <div className="flex flex-wrap gap-[24px]">
-            {filteredItems?.slice(0, displayCount).map((e, i) => (
-              <div
-                key={i}
-                style={{
-                  width: e.width + "px",
-                  height: e.height + "px",
-                  borderRadius: e.radius + "px",
-                  overflow: "hidden",
-                  marginBottom: "24px", // Add gap at the bottom
-                }}>
-                <img
-                  src={e.src}
-                  alt={e.caption}
-                  className="object-cover w-full h-full"
-                  onClick={() => handleClick(i)}
-                />
-              </div>
-            ))}
+          <div className="flex flex-wrap gap-[24px] ">
+            {filteredItems?.slice(0, displayCount).map((e, i) => {
+              console.log("e", e);
+              return (
+                <div
+                  key={i}
+                  style={{
+                    width: e.width + "px",
+                    height: e.height + "px",
+                    borderRadius: e.radius + "px",
+                    overflow: "hidden",
+                    marginBottom: "24px",
+                  }}
+                  className="relative">
+                  <img
+                    src={e.src}
+                    alt={e.caption}
+                    className="object-cover w-full h-full"
+                    onClick={() => handleClick(i)}
+                  />
+                  <p
+                    className="text-[14px] border border-white text-white border-opacity-50 px-2.5 py-0.5 rounded-[7px] hover:bg-[#86371C] cursor-pointer absolute bottom-5 left-5 shadow-md"
+                    style={{ fontFamily: "value_sans_proregular" }}>
+                    {e?.caption}
+                  </p>
+                </div>
+              );
+            })}
 
             {filteredItems.length > 5 && (
               <div className="flex justify-center mx-auto mt-4 pb-[90px]">
                 {displayCount === filteredItems.length ? (
-                  <button
-                    className="w-[162px] text-[16px] text-[#86371C] h-[52px] rounded-[12px] border border-[#86371C]"
-                    onClick={showLess}>
-                    Show Less
-                  </button>
+                  <Button
+                    onClick={showLess}
+                    title={"Show Less"}
+                    bgColor={"#00FFFFFF"}
+                    textColor={"#86371C"}
+                  />
                 ) : (
-                  <button
-                    className="w-[162px] text-[16px] text-[#86371C] h-[52px] rounded-[12px] border border-[#86371C]"
-                    onClick={() => showMore(filteredItems)}>
-                    Show More
-                  </button>
+                  <Button
+                    onClick={() => showMore(filteredItems)}
+                    title={"Show More"}
+                    bgColor={"#00FFFFFF"}
+                    textColor={"#86371C"}
+                  />
                 )}
               </div>
             )}
 
             {!!currentImage && (
               <Lightbox
+                style={{ fontFamily: "value_sans_proregular" }}
                 mainSrc={currentImage.original}
                 imageTitle={currentImage.caption}
                 mainSrcThumbnail={currentImage.src}
@@ -109,7 +124,7 @@ const ShowCase = () => {
   };
 
   return (
-    <div className="mt-[360px] lg:mt-0 w-[340px] lg:w-[1391px] mx-auto">
+    <div className="mt-[360px] lg:mt-[90px] w-[340px] lg:w-[1391px] mx-auto">
       <p
         className="text-[16px] uppercase text-[#86371C] text-center leading-[24px]"
         style={{
@@ -118,11 +133,10 @@ const ShowCase = () => {
         Showcase
       </p>
       <div className="h-[2px] mt-2 mx-auto w-[124px] bg-gradient-to-l from-[#df745151] via-[#86371C] to-[#df745151]"></div>
-      <p
-        className=" text-[22px] text-center lg:text-[44px] text-[#270A05] mt-[10px] lg:mt-[12px] leading-[30px] lg:leading-[60px]"
-        style={{ fontFamily: "bakilda_historiregular" }}>
-        Our Chefs New Creations
-      </p>
+
+      <div className="flex justify-center items-center">
+        <SectionHeaderText title={"Our Chefs New Creations"} />
+      </div>
       <p
         className="text-[16px] lg:text-[18px] text-[#031811B2] w-[340px] text-center leading-[20px] lg:leading-[32px] lg:w-[674px] mx-auto mt-[19px] lg:mt-[24px]"
         style={{
@@ -272,7 +286,7 @@ const ShowCase = () => {
           {toggleState === 1 && renderFilteredServices(images)}
           {toggleState === 2 && renderFilteredServices(Burger)}
           {toggleState === 3 && renderFilteredServices(Drinks)}
-          {toggleState === 4 && renderFilteredServices(Pizza)}{" "}
+          {toggleState === 4 && renderFilteredServices(Pizza)}
           {toggleState === 5 && renderFilteredServices(Dinner)}
           {toggleState === 6 && renderFilteredServices(Cookies)}
           {toggleState === 7 && renderFilteredServices(Bakery)}

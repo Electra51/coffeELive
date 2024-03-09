@@ -3,8 +3,10 @@ import aboutLogo from "../../../assets/AboutSectionImage/about.jpeg";
 import { aboutMenuData } from "../../../components/common/data";
 import borderImage from "../../../assets/AboutSectionImage/1.png";
 import flowerImage from "../../../assets/AboutSectionImage/2.svg";
+import Button from "../../../components/common/Button";
+import SectionHeaderText from "../../../components/common/SectionHeaderText";
 
-const AboutMenuSection = () => {
+const WhyChooseSection = () => {
   return (
     <div className="pt-[100px] lg:pt-[165px] w-[340px] lg:w-[1391px] mx-auto pb-[100px] lg:pb-[127px] relative">
       <img
@@ -25,11 +27,10 @@ const AboutMenuSection = () => {
             </h2>{" "}
             <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C] lg:hidden"></div>
           </div>
-          <h1
-            className="text-[22px] lg:text-left text-center lg:text-[44px] text-[#270A05] mt-[10px] lg:mt-[12px] leading-[30px] lg:leading-[60px]"
-            style={{ fontFamily: "bakilda_historiregular" }}>
-            Choosing Unlocklive, A Taste of Perfection
-          </h1>
+
+          <SectionHeaderText
+            title={"Choosing Unlocklive, A Taste of Perfection"}
+          />
           <p
             className="text-[16px] text-[#270A05] lg:text-left text-center font-normal mt-[12px] leading-[22px] lg:leading-[27px]"
             style={{ fontFamily: "value_sans_proregular" }}>
@@ -40,9 +41,15 @@ const AboutMenuSection = () => {
             {aboutMenuData?.map((menuData, i) => {
               return (
                 <div
-                  className="w-[105px] lg:w-[203px] h-[70px] lg:h-[134px] rounded-[10px] border-[1.5px] border-[#270A05] border-opacity-10 flex flex-col justify-center items-center"
+                  className="w-[105px] lg:w-[203px] h-[70px] lg:h-[134px] rounded-[10px] border-[1.5px] border-[#270A05] border-opacity-10 flex flex-col justify-center items-center relative"
                   key={i}
                   style={{ fontFamily: "bakilda_historiregular" }}>
+                  {menuData?.number == "100+" ? (
+                    <div className="w-[105px] lg:w-[203px] h-[70px] lg:h-[134px] rounded-[10px] border-[1.5px] border-[#270A05] border-opacity-10 absolute -top-0 -left-2 rotate-3"></div>
+                  ) : (
+                    ""
+                  )}
+
                   <h2 className="text-[22px] lg:text-[44px] leading-[18px] lg:leading-[56px] text-[#270A05]">
                     {menuData?.number}
                   </h2>
@@ -59,14 +66,12 @@ const AboutMenuSection = () => {
             Your choice to savor our coffee is an invitation to experience the
             epitome of craftsmanship, flavor, and dedication.
           </p>
-          <div className="flex justify-center lg:justify-start items-center">
-            <button
-              className="w-[190px] lg:w-[199px] h-[42px] lg:h-[52px] rounded-xl border border-[#86371C] text-[#86371C] mt-[50px] text-[12px] lg:text-[16px] text-nowrap"
-              style={{
-                fontFamily: "value_sans_proregular",
-              }}>
-              Explore Our Menus
-            </button>
+          <div className="flex justify-center lg:justify-start items-center mt-[25px] lg:mt-[50px]">
+            <Button
+              title={"Explore Our Menus"}
+              bgColor={"#00FFFFFF"}
+              textColor={"#86371C"}
+            />
           </div>
         </div>{" "}
         <div className="relative">
@@ -92,4 +97,4 @@ const AboutMenuSection = () => {
   );
 };
 
-export default AboutMenuSection;
+export default WhyChooseSection;

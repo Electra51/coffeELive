@@ -80,3 +80,45 @@
 h1 {
   font-family: "bakilda_historiregular";
 }
+
+::-webkit-scrollbar {
+  height: 1px;
+  width: 1px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: transparent;
+  border-radius: 10px;
+}
+.scroll-to-top {
+  background-color: #86371c !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  right: 40px;
+  bottom: 40px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 100% !important;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+  border: none;
+}
