@@ -11,8 +11,8 @@ const Home = () => {
       <HeroSection />
       <AboutMenuSection />
       <CoffeeMenuSection />
-      {/* <NewReceipeSection />
-      <ShowCase /> */}
+      <NewReceipeSection />
+      {/* <ShowCase /> */}
     </>
   );
 };

@@ -6,7 +6,7 @@ import flowerImage from "../../../assets/AboutSectionImage/2.svg";
 
 const AboutMenuSection = () => {
   return (
-    <div className="pt-[70px] lg:pt-[165px] w-[340px] lg:w-[1391px] mx-auto pb-[127px] relative">
+    <div className="pt-[100px] lg:pt-[165px] w-[340px] lg:w-[1391px] mx-auto pb-[100px] lg:pb-[127px] relative">
       <img
         src={flowerImage}
         alt=""
@@ -23,7 +23,7 @@ const AboutMenuSection = () => {
               }}>
               Why Choose Us
             </h2>{" "}
-            <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C]"></div>
+            <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C] lg:hidden"></div>
           </div>
           <h1
             className="text-[22px] lg:text-left text-center lg:text-[44px] text-[#270A05] mt-[10px] lg:mt-[12px] leading-[30px] lg:leading-[60px]"

@@ -14,6 +14,11 @@ import coffeeMenuImg1 from "../../assets/CoffeeMenuImage/1.jpeg";
 import coffeeMenuImg2 from "../../assets/CoffeeMenuImage/2.jpeg";
 import coffeeMenuImg3 from "../../assets/CoffeeMenuImage/3.jpeg";
 import coffeeMenuImg4 from "../../assets/CoffeeMenuImage/4.jpeg";
+import recipe1 from "../../assets/RecipeImage/1coffe.png";
+import recipe2 from "../../assets/RecipeImage/2coffe.png";
+import recipe3 from "../../assets/RecipeImage/3coffe.png";
+import recipe4 from "../../assets/RecipeImage/4coffe.jpg";
+import recipe5 from "../../assets/RecipeImage/5coffe.jpg";
 export const navMenus = [
   {
     menu_name: "Home",
@@ -274,5 +279,38 @@ export const coffeeMenuData = [
     para: "There are many variations of passages Lorem Ipsum form",
     img: coffeeMenuImg4,
     rate: 15,
+  },
+];
+
+export const RecipeData = [
+  {
+    id: 1,
+    img: recipe1,
+    title: "Pita bread or wraps",
+    text: "Toppings: tomatoes, tahini sauce, etc.",
+  },
+  {
+    id: 2,
+    img: recipe3,
+    title: "Crispy Chicken Burger",
+    text: "Ingredients: tomato sauce, chicken, latus etc.",
+  },
+  {
+    id: 3,
+    img: recipe2,
+    title: "Pepperoni Pizza",
+    text: "Toppings: tomato sauce, pepperoni etc.",
+  },
+  {
+    id: 4,
+    img: recipe4,
+    title: "Pepperoni Pizza",
+    text: "Toppings: tomato sauce, pepperoni etc.",
+  },
+  {
+    id: 5,
+    img: recipe5,
+    title: "Pepperoni Pizza",
+    text: "Toppings: tomato sauce, pepperoni etc.",
   },
 ];

@@ -58,7 +58,7 @@ const HeroSection = () => {
         alt=""
         className="hidden lg:flex absolute w-[250px] bottom-[280px] left-60"
       />
-      <div className="w-[340px] lg:w-[1391px] mx-auto mb-[80px] lg:mb-[175px]">
+      <div className="w-[340px] lg:w-[1391px] mx-auto mb-[100px] lg:mb-[175px]">
         <Slider {...settings}>
           {heroData?.map((hero, i) => {
             return (
