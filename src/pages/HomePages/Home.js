@@ -12,7 +12,7 @@ const Home = () => {
       <AboutMenuSection />
       <CoffeeMenuSection />
       <NewReceipeSection />
-      {/* <ShowCase /> */}
+      <ShowCase />
     </>
   );
 };

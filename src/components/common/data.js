@@ -19,6 +19,33 @@ import recipe2 from "../../assets/RecipeImage/2coffe.png";
 import recipe3 from "../../assets/RecipeImage/3coffe.png";
 import recipe4 from "../../assets/RecipeImage/4coffe.jpg";
 import recipe5 from "../../assets/RecipeImage/5coffe.jpg";
+import allImg1 from "../../assets/MenuImage/1.jpeg";
+import allImg2 from "../../assets/MenuImage/2.jpeg";
+import allImg3 from "../../assets/MenuImage/3.jpeg";
+import allImg4 from "../../assets/MenuImage/4.jpeg";
+import allImg5 from "../../assets/MenuImage/5.jpeg";
+import burgerImg1 from "../../assets/MenuImage/burger1.jpeg";
+import burgerImg2 from "../../assets/MenuImage/burger2.jpeg";
+import burgerImg3 from "../../assets/MenuImage/burger3.jpeg";
+import burgerImg4 from "../../assets/MenuImage/burger4.jpeg";
+import burgerImg5 from "../../assets/MenuImage/burger5.jpeg";
+import bakery1 from "../../assets/MenuImage/bakery.jpg";
+import bakery3 from "../../assets/MenuImage/bakery3.jpg";
+import barekry2 from "../../assets/MenuImage/barekry2.jpg";
+import cookies from "../../assets/MenuImage/cookies.jpg";
+import cookies2 from "../../assets/MenuImage/cookies2.jpg";
+import cookies3 from "../../assets/MenuImage/cookies3.jpg";
+import dinner1 from "../../assets/MenuImage/dinner1.jpg";
+import dinner2 from "../../assets/MenuImage/dinner2.jpg";
+import dinner3 from "../../assets/MenuImage/dinner3.jpg";
+import hotchocolet from "../../assets/MenuImage/hotchocolet.jpg";
+import lemonate1 from "../../assets/MenuImage/lemonate1.jpg";
+import milkshake from "../../assets/MenuImage/milkshake.jpg";
+import lemonate3 from "../../assets/MenuImage/lemonate3.jpg";
+import lemonate2 from "../../assets/MenuImage/lemonate2.jpg";
+import pizza1 from "../../assets/MenuImage/pizza1.png";
+import pizza2 from "../../assets/MenuImage/pizza2.png";
+import pizza3 from "../../assets/MenuImage/pizza3.png";
 export const navMenus = [
   {
     menu_name: "Home",
@@ -312,5 +339,307 @@ export const RecipeData = [
     img: recipe5,
     title: "Pepperoni Pizza",
     text: "Toppings: tomato sauce, pepperoni etc.",
+  },
+];
+
+export const images = [
+  {
+    id: 1,
+    src: allImg1,
+    original: allImg1,
+    width: 424,
+    height: 348,
+    radius: 24,
+    tags: [
+      { value: "Nature", title: "Nature" },
+      { value: "Flora", title: "Flora" },
+    ],
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 2,
+    src: allImg2,
+    original: allImg2,
+    width: 872,
+    category: "Drinks",
+    height: 348,
+    radius: 24,
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 3,
+    src: allImg3,
+    original: allImg3,
+    width: 312,
+    radius: 24,
+    height: 348,
+    caption: "Color Pencils (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 21,
+    src: hotchocolet,
+    original: hotchocolet,
+    width: 424,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 4,
+    src: allImg4,
+    original: allImg4,
+    width: 536,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+  },
+  {
+    id: 6,
+    src: burgerImg1,
+    original: burgerImg1,
+    width: 424,
+    height: 348,
+    category: "Burger",
+    radius: 24,
+    tags: [
+      { value: "Nature", title: "Nature" },
+      { value: "Flora", title: "Flora" },
+    ],
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 5,
+    src: allImg5,
+    original: allImg5,
+    width: 424,
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+
+  {
+    id: 25,
+    src: lemonate2,
+    original: lemonate2,
+    width: 424,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 7,
+    src: burgerImg2,
+    original: burgerImg2,
+    category: "Burger",
+    // width: 424,
+    // height: 348,
+    width: 872,
+    height: 348,
+    radius: 24,
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 15,
+    src: cookies,
+    original: cookies,
+    width: 424,
+    radius: 24,
+    category: "Cookies",
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+
+  {
+    id: 24,
+    src: lemonate3,
+    original: lemonate3,
+    width: 312,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 9,
+    src: burgerImg3,
+    original: burgerImg3,
+    width: 536,
+    category: "Burger",
+    radius: 24,
+    height: 348,
+    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+  },
+  {
+    id: 10,
+    src: burgerImg4,
+    original: burgerImg4,
+    width: 424,
+    category: "Burger",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+
+  {
+    id: 12,
+    src: bakery1,
+    original: bakery1,
+    width: 872,
+    category: "Bakery",
+    height: 348,
+    radius: 24,
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    id: 22,
+    src: lemonate1,
+    original: lemonate1,
+    width: 424,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 11,
+    src: burgerImg5,
+    original: burgerImg5,
+
+    width: 312,
+    category: "Burger",
+    height: 348,
+    radius: 24,
+    tags: [
+      { value: "Nature", title: "Nature" },
+      { value: "Flora", title: "Flora" },
+    ],
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+
+  {
+    id: 14,
+    src: barekry2,
+    original: barekry2,
+    width: 424,
+    category: "Bakery",
+    radius: 24,
+    height: 348,
+    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+  },
+  {
+    id: 13,
+    src: bakery3,
+    original: bakery3,
+    width: 536,
+    category: "Bakery",
+    radius: 24,
+    height: 348,
+    caption: "Color Pencils (Jeshu John - designerspics.com)",
+  },
+
+  {
+    id: 19,
+    src: dinner2,
+    original: dinner2,
+    width: 872,
+    category: "Dinner",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 18,
+    src: dinner1,
+    original: dinner1,
+    width: 424,
+    category: "Dinner",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 20,
+    src: dinner3,
+    category: "Dinner",
+    original: dinner3,
+    width: 424,
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 26,
+    src: pizza1,
+    original: pizza1,
+    width: 872,
+
+    category: "Pizza",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 16,
+    src: cookies2,
+    original: cookies2,
+    width: 424,
+    category: "Cookies",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 23,
+    src: milkshake,
+    original: milkshake,
+    width: 424,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+
+  {
+    id: 27,
+    src: pizza2,
+    original: pizza2,
+    width: 424,
+    category: "Pizza",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 28,
+    src: coffeeMenuImg1,
+    original: coffeeMenuImg1,
+    width: 424,
+    category: "Drinks",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 32,
+    src: pizza3,
+    original: pizza3,
+    width: 424,
+    category: "Pizza",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    id: 17,
+    src: cookies3,
+    original: cookies3,
+    width: 424,
+    category: "Cookies",
+    radius: 24,
+    height: 348,
+    caption: "37H (gratispgraphy.com)",
   },
 ];

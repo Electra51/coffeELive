@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-import { images } from "./images";
+import { images } from "../../../components/common/data";
 
 const ShowCase = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -76,7 +76,7 @@ const ShowCase = () => {
                   <button
                     className="w-[162px] text-[16px] text-[#86371C] h-[52px] rounded-[12px] border border-[#86371C]"
                     onClick={() => showMore(filteredItems)}>
-                    View All Menu
+                    Show More
                   </button>
                 )}
               </div>
@@ -109,7 +109,7 @@ const ShowCase = () => {
   };
 
   return (
-    <div className="pt-[90px] w-[1391px] mx-auto">
+    <div className="mt-[360px] lg:mt-0 w-[340px] lg:w-[1391px] mx-auto">
       <p
         className="text-[16px] uppercase text-[#86371C] text-center leading-[24px]"
         style={{
@@ -119,12 +119,12 @@ const ShowCase = () => {
       </p>
       <div className="h-[2px] mt-2 mx-auto w-[124px] bg-gradient-to-l from-[#df745151] via-[#86371C] to-[#df745151]"></div>
       <p
-        className="mt-[12px] text-[44px] text-[#270A05] text-center"
+        className=" text-[22px] text-center lg:text-[44px] text-[#270A05] mt-[10px] lg:mt-[12px] leading-[30px] lg:leading-[60px]"
         style={{ fontFamily: "bakilda_historiregular" }}>
         Our Chefs New Creations
       </p>
       <p
-        className="text-[18px] text-[#031811B2] w-[674px] mx-auto mt-[24px]"
+        className="text-[16px] lg:text-[18px] text-[#031811B2] w-[340px] text-center leading-[20px] lg:leading-[32px] lg:w-[674px] mx-auto mt-[19px] lg:mt-[24px]"
         style={{
           fontFamily: "value_sans_proregular",
         }}>
@@ -133,7 +133,7 @@ const ShowCase = () => {
         innovation.
       </p>
 
-      <div className="mt-[60px] mx-auto w-[1320px]">
+      <div className="mt-[60px] mx-auto  w-[340px] lg:w-[1320px]">
         <div className="hidden md:flex md:mx-auto lg:mx-0 lg:flex justify-center items-center gap-5">
           <p
             className={
@@ -195,6 +195,74 @@ const ShowCase = () => {
               toggleState == 7
                 ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[22px] font-normal px-[24px] py-[12px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
                 : "text-[22px] text-[#031811] font-normal px-[24px] py-[12px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(7)}>
+            Bakery
+          </p>
+        </div>
+
+        {/* for mobile  */}
+        <div className="lg:hidden flex overflow-x-auto gap-x-[12px] w-[340px] mx-auto">
+          <p
+            className={
+              toggleState == 1
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            style={{ fontFamily: "value_sans_proregular" }}
+            onClick={() => toggleTab(1)}>
+            All
+          </p>
+          <p
+            className={
+              toggleState == 2
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(2)}>
+            Burger
+          </p>
+          <p
+            className={
+              toggleState == 3
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(3)}>
+            Drinks
+          </p>
+          <p
+            className={
+              toggleState == 4
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(4)}>
+            Pizza
+          </p>
+          <p
+            className={
+              toggleState == 5
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(5)}>
+            Dinner
+          </p>
+          <p
+            className={
+              toggleState == 6
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+            }
+            onClick={() => toggleTab(6)}>
+            Cookies
+          </p>
+          <p
+            className={
+              toggleState == 7
+                ? " border-[1.5px] border-[#86371C] text-[#86371C]  text-[16px] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
+                : "text-[16px] text-[#031811] font-normal px-[10px] py-[5px] rounded-[50px] cursor-pointer hover:shadow-md shadow-[#86371C] hover:bg-[#86371C] hover:text-white"
             }
             onClick={() => toggleTab(7)}>
             Bakery
