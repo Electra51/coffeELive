@@ -29,12 +29,12 @@ const WhyChooseSection = () => {
           </div>
 
           <SectionHeaderText
-            title={"Choosing Unlocklive, A Taste of Perfection"}
+            title={"Choosing CoffeELive, A Taste of Perfection"}
           />
           <p
             className="text-[16px] text-[#270A05] lg:text-left text-center font-normal mt-[12px] leading-[22px] lg:leading-[27px]"
             style={{ fontFamily: "value_sans_proregular" }}>
-            Unlocklive takes pride in the art of roasting, transforming raw
+            CoffeELive takes pride in the art of roasting, transforming raw
             coffee beans into a symphony of aromatic notes and rich flavors.
           </p>
           <div className="grid grid-cols-3 gap-[12px] lg:gap-[26px] mt-[30px]">

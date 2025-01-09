@@ -25,7 +25,7 @@ const CoffeeMenuSection = () => {
         <div className="h-[3px] w-[50px] bg-gradient-to-r from-[#86371C]"></div>
       </div>
 
-      <SectionHeaderText title={"Unlocklive Coffee Menu"} />
+      <SectionHeaderText title={"CoffeELive Coffee Menu"} />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mt-[40px] lg:mt-[80px] pb-[40px] lg:pb-[60px]">
         {coffeeMenuData?.map((coffeeMenu, i) => {
           return (

@@ -108,9 +108,9 @@ export const heroData = [
   {
     id: 1,
     welcome: "WELCOME TO OUR",
-    headline: " Unlocklive",
+    headline: " coffeELive",
     sub_head: "Elevating Your Coffee Experience",
-    para: "Unlocklive embodies our commitment to transforming the simple act of sipping coffee into a refined and memorable journey.",
+    para: "coffeELive embodies our commitment to transforming the simple act of sipping coffee into a refined and memorable journey.",
     main_img: img1,
     avarter_img: [
       {
@@ -130,7 +130,7 @@ export const heroData = [
   {
     id: 2,
     welcome: "WELCOME TO OUR",
-    headline: " Unlocklive",
+    headline: " coffeELive",
     sub_head: "Fresh Coffee, Fresh Start",
     para: "At Epicurean, we take pride in curating an exceptional coffee experience that transcends the ordinary.",
     main_img: img2,
@@ -152,7 +152,7 @@ export const heroData = [
   {
     id: 3,
     welcome: "WELCOME TO OUR",
-    headline: " Unlocklive",
+    headline: " coffeELive",
     sub_head: "Savor the Coffee Taste",
     para: "Memorable journey. At Epicurean, we take pride in curating an exceptional coffee experience that transcends the ordinary.",
     main_img: img3,
@@ -174,7 +174,7 @@ export const heroData = [
   {
     id: 4,
     welcome: "WELCOME TO OUR",
-    headline: " Unlocklive",
+    headline: " coffeELive",
     sub_head: "Your Perfect Coffee Break Awaits",
     para: "Commitment to transforming the simple act of sipping coffee into a refined and memorable journey. At Epicurean, we take pride in curating.",
     main_img: img4,
@@ -196,7 +196,7 @@ export const heroData = [
   {
     id: 5,
     welcome: "WELCOME TO OUR",
-    headline: "Unlocklive",
+    headline: "coffeELive",
     sub_head: "A Journey Through Coffee Flavors",
     para: "Sipping coffee into a refined and memorable journey. At Epicurean, we take pride in curating an exceptional coffee experience that transcends the ordinary.",
     main_img: img5,
@@ -218,9 +218,9 @@ export const heroData = [
   {
     id: 6,
     welcome: "WELCOME TO OUR",
-    headline: " Unlocklive",
+    headline: " coffeELive",
     sub_head: "Elevating Your Coffee Experience",
-    para: "Unlocklive embodies our commitment to transforming the simple act of sipping coffee into a refined and memorable journey. At Epicurean, we take pride.",
+    para: "coffeELive embodies our commitment to transforming the simple act of sipping coffee into a refined and memorable journey. At Epicurean, we take pride.",
     main_img: img6,
     avarter_img: [
       {
