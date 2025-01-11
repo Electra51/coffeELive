@@ -14,6 +14,7 @@ const Navbar = () => {
   const navMenuss = (
     <>
       {navMenus?.map((menu, i) => {
+        console.log("m", menu);
         return menu?.submenu ? (
           <li
             key={i}
@@ -23,10 +24,11 @@ const Navbar = () => {
             }}>
             <details>
               <summary>{menu?.menu_name}</summary>
-              <ul className="p-2">
+              <ul className="p-2 z-10">
                 {menu?.submenu?.map((menu2, i) => {
+                  console.log("m2", menu2);
                   return (
-                    <li>
+                    <li key={i}>
                       <Link to={menu2?.link} className="text-nowrap">
                         {menu2?.menu_name}
                       </Link>

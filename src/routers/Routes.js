@@ -3,6 +3,7 @@ import Contact from "../pages/ContactPages/Contact";
 import ErrorPage from "../pages/ErrorPages/ErrorPage";
 import Home from "../pages/HomePages/Home";
 import MenuPage from "../pages/MenuPages/MenuPage";
+import Products from "../pages/ProductsPages/Products";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: MainLayouts } = require("../components/layouts/MainLayouts");
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/product",
+        element: <Products />,
       },
       {
         path: "/contact",
