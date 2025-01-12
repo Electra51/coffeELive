@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { IoLogOutOutline } from "react-icons/io5";
 import {
   MdOutlineMenu,
   MdOutlineSearch,
@@ -8,13 +9,31 @@ import { GoHeart } from "react-icons/go";
 import { AiOutlineUser } from "react-icons/ai";
 import logo from "../../assets/logo.png";
 import { navMenus } from "./data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 
 const Navbar = () => {
+  const { cartLength } = useCart();
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const userCredentials = localStorage.getItem("user");
+    if (userCredentials) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setIsLoggedIn(false);
+    alert("You have been logged out.");
+    navigate("/");
+  };
+
   const navMenuss = (
     <>
       {navMenus?.map((menu, i) => {
-        console.log("m", menu);
         return menu?.submenu ? (
           <li
             key={i}
@@ -26,7 +45,6 @@ const Navbar = () => {
               <summary>{menu?.menu_name}</summary>
               <ul className="p-2 z-10">
                 {menu?.submenu?.map((menu2, i) => {
-                  console.log("m2", menu2);
                   return (
                     <li key={i}>
                       <Link to={menu2?.link} className="text-nowrap">
@@ -50,6 +68,7 @@ const Navbar = () => {
       })}
     </>
   );
+
   return (
     <div className="border-0 border-b border-[#101113] border-opacity-10 pt-[7px] lg:pt-[20px] pb-[7px] lg:pb-[35px]">
       <div className="navbar bg-base-100 w-[390px] lg:w-[1366px] mx-auto ">
@@ -92,23 +111,30 @@ const Navbar = () => {
                     <p className="px-3">Cart</p>
                     <MdOutlineShoppingCart className="text-[#270A05] text-[18px]" />
                     <span className="badge badge-sm indicator-item bg-[#270A05] text-white">
-                      8
+                      {cartLength}
                     </span>
                   </div>
                 </div>
               </div>
               <div className="flex justify-normal items-center gap-2 pl-2">
-                {" "}
                 <div className="w-[26px] h-[26px] bg-[#270A05] flex justify-center items-center rounded-full">
                   <AiOutlineUser className="text-white text-[18px]" />
                 </div>
-                <p
-                  className="text-[16px] font-medium text-[#270A05]"
-                  style={{
-                    fontFamily: "value_sans_promedium",
-                  }}>
-                  Sign in
-                </p>
+                {isLoggedIn ? (
+                  <button
+                    onClick={handleLogout}
+                    className="text-[16px] font-medium text-[#270A05]">
+                    Logout
+                  </button>
+                ) : (
+                  <p
+                    className="text-[16px] font-medium text-[#270A05]"
+                    style={{
+                      fontFamily: "value_sans_promedium",
+                    }}>
+                    Sign in
+                  </p>
+                )}
               </div>
             </ul>
           </div>
@@ -173,23 +199,41 @@ const Navbar = () => {
               <div className="indicator">
                 <MdOutlineShoppingCart className="text-[#270A05] text-[18px]" />
                 <span className="badge badge-sm indicator-item bg-[#270A05] text-white">
-                  8
+                  {cartLength}
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex justify-normal items-center gap-[15px] cursor-pointer group hover:bg-[#270A05] rounded-full px-3">
-            <div className="w-[30px] h-[30px] bg-[#270A05] flex justify-center items-center rounded-full">
-              <AiOutlineUser className="text-white text-[18px]" />
-            </div>
-            <p
-              className="text-[16px] font-medium text-[#270A05] group-hover:text-white"
-              style={{
-                fontFamily: "value_sans_promedium",
-              }}>
-              Sign in
-            </p>
-          </div>
+          {isLoggedIn ? (
+            <Link
+              to={"/login"}
+              className="flex justify-normal items-center gap-2 cursor-pointer rounded-full px-3 border border-[#86371C] py-0.5">
+              <IoLogOutOutline className="text-[#86371C] text-[18px]" />
+
+              <p
+                className="text-[16px] font-medium text-[#86371C]"
+                style={{
+                  fontFamily: "value_sans_promedium",
+                }}>
+                Log out
+              </p>
+            </Link>
+          ) : (
+            <Link
+              to={"/login"}
+              className="flex justify-normal items-center gap-[15px] cursor-pointer group hover:bg-[#270A05] rounded-full px-3">
+              <div className="w-[30px] h-[30px] bg-[#270A05] flex justify-center items-center rounded-full">
+                <AiOutlineUser className="text-white text-[18px]" />
+              </div>
+              <p
+                className="text-[16px] font-medium text-[#270A05] group-hover:text-white"
+                style={{
+                  fontFamily: "value_sans_promedium",
+                }}>
+                Sign in
+              </p>
+            </Link>
+          )}
         </div>
       </div>
     </div>

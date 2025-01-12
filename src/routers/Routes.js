@@ -2,6 +2,7 @@ import About from "../pages/AboutPages/About";
 import Contact from "../pages/ContactPages/Contact";
 import ErrorPage from "../pages/ErrorPages/ErrorPage";
 import Home from "../pages/HomePages/Home";
+import Login from "../pages/LoginPages/Login";
 import MenuPage from "../pages/MenuPages/MenuPage";
 import Products from "../pages/ProductsPages/Products";
 
@@ -35,5 +36,9 @@ export const router = createBrowserRouter([
         element: <MenuPage />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
