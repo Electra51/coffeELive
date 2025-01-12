@@ -3,7 +3,7 @@
 
 
 ## Project Logo
-![Logo]([https://i.ibb.co/h8n6kK5/Screenshot-from-2024-02-05-13-22-11.png](https://i.ibb.co.com/kGpPj8Q/download.png))
+![Logo](https://i.ibb.co.com/kGpPj8Q/download.png)
 
 
 ## Features
