@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
 import { images } from "../../../components/common/data";
 import Button from "../../../components/common/Button";
 import SectionHeaderText from "../../../components/common/SectionHeaderText";
@@ -23,14 +21,10 @@ const ShowCase = () => {
 
   const currentImage = images[index];
   const nextIndex = (index + 1) % images.length;
-  const nextImage = images[nextIndex] || currentImage;
   const prevIndex = (index + images.length - 1) % images.length;
-  const prevImage = images[prevIndex] || currentImage;
 
+  console.log("currentImage", currentImage);
   const handleClick = (index) => setIndex(index);
-  const handleClose = () => setIndex(-1);
-  const handleMovePrev = () => setIndex(prevIndex);
-  const handleMoveNext = () => setIndex(nextIndex);
 
   // Calculation container width based on the number of images and gap
   const containerWidth = images.length * (424 + 24) - 24;
@@ -94,22 +88,6 @@ const ShowCase = () => {
                   />
                 )}
               </div>
-            )}
-
-            {!!currentImage && (
-              <Lightbox
-                style={{ fontFamily: "value_sans_proregular" }}
-                mainSrc={currentImage.original}
-                imageTitle={currentImage.caption}
-                mainSrcThumbnail={currentImage.src}
-                nextSrc={nextImage.original}
-                nextSrcThumbnail={nextImage.src}
-                prevSrc={prevImage.original}
-                prevSrcThumbnail={prevImage.src}
-                onCloseRequest={handleClose}
-                onMovePrevRequest={handleMovePrev}
-                onMoveNextRequest={handleMoveNext}
-              />
             )}
           </div>
         </div>
