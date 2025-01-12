@@ -41,5 +41,5 @@ https://coffee-landing-page-two.vercel.app/
 
 ![App Screenshot](https://i.ibb.co.com/r3sj5yw/Screenshot-from-2025-01-12-15-08-32.png)
 
-![App Screenshot](https://i.ibb.co/pddh3Hy/Screenshot-from-2024-03-09-21-04-43.png)
+![App Screenshot](https://i.ibb.co.com/RhyjPkd/Screenshot-from-2025-01-12-15-16-14.png)
 
