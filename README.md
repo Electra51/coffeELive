@@ -19,7 +19,7 @@
 
 ## Demo
 
-[https://65ec7560cda6dcaea4d25e07--gleeful-elf-1988bf.netlify.app/](https://coffee-landing-page-two.vercel.app/)
+https://coffee-landing-page-two.vercel.app/
 
 
 ## Technologies Used
@@ -33,7 +33,7 @@
 ## Screenshots
 
 
-[![App Screenshot]([https://i.ibb.co/qRq3Gn0/Screenshot-from-2024-03-09-21-02-02.png](https://i.ibb.co.com/z89Sw1H/Screenshot-from-2025-01-12-15-07-29.png))](https://i.ibb.co.com/z89Sw1H/Screenshot-from-2025-01-12-15-07-29.png)
+![App Screenshot](https://i.ibb.co.com/z89Sw1H/Screenshot-from-2025-01-12-15-07-29.png)
 
 ![App Screenshot](https://i.ibb.co/0j5r6Gp/Screenshot-from-2024-03-09-21-07-08.png)
 
